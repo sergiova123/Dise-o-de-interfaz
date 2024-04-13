@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
+    <link rel="stylesheet" href="carrucel.css">
+    <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js/glider.min.css">
   </head>
   <body>
     <nav>
@@ -23,7 +24,7 @@
 
     <!-- Sección principal -->
     <section class="hero">
-      <h1>Explora el Mundo de los UI Frameworks y Componentes</h1>
+      <h1>Explora el Mundo de los Frameworks UI y Componentes UI</h1>
       <p>
         Descubre herramientas y técnicas para construir interfaces modernas y
         efectivas.
@@ -32,7 +33,7 @@
       <img src="img/inicio.jpg" alt="imagen llamativa" />
     </section>
     <section class="beneficios">
-      <h2>Beneficios de los UI Frameworks</h2>
+      <h2>Beneficios de los Frameworks UI y componentes UI</h2>
       <ul>
         <li>
           <i class="fas fa-rocket"></i> 
@@ -80,16 +81,116 @@
     </section>
 
     <!-- Galería o carrusel -->
-    <section class="galeria">
-      <!-- Ejemplos visuales aquí -->
-    </section>
+    
+        <div class="row">
+            <div class="carrusel-contenedor">
+                <button
+                    aria-label="Anterior"
+                    class="carrusel-anterior btn-carrusel-ant-1"
+                >
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="carrusel-lista lista-1">
+                    <div class="carrusel-elementos">
+                        <a href="https://getbootstrap.com/" data-lightbox="galería" title="Bootstrap">
+                            <img src="img/image 14.svg" class="img-thumbnail">
+                        </a>
+                        
+                    </div>
+                    <div class="carrusel-lista">
+                        <a
+                            href="img/image 15.svg" data-lightbox="galería" title="Foundation">    
+                            <img
+                                src="img/image 15.svg" class="img-thumbnail">
+                        </a>
+                    </div>
+                    <div class="carrusel-elementos">
+                        <a
+                            href="img/image 16.svg" data-lightbox="galería" title="Material-UI" 
+                            ><img
+                                src="img/image 16.svg" class="img-thumbnail">
+                                
+                        </a>
+                    </div>
+                    <div class="carrusel-elementos">
+                        <a
+                            href="img/image 17.svg" data-lightbox="galería" title="Semantic UI"                           
+                            ><img
+                                src="img/image 17.svg" class="img-thumbnail">
+                                
+                        </a>
+                    </div>
+                    <div class="carrusel-elementos">
+                        <a
+                            href="img/image 18.svg" data-lightbox="galería" title="Tailwind CSS"                          
+                            ><img
+                                src="img/image 18.svg" class="img-thumbnail"
+                                
+                        /></a>
+                    </div>
+                    <div class="carrusel-elementos">
+                        <a
+                            href="img/image 19.svg " data-lightbox="galería" title="Bulma"                           
+                            ><img
+                                src="img/image 19.svg " class="img-thumbnail">
+                                
+                        </a>
+                    </div>
+                    <div class="carrusel-elementos">
+                        <a href="img/image 20.svg." data-lightbox="galería" title="Vue Material">
+                            <img src="img/image 20.svg." class="img-thumbnail">
+                        </a>
+                        
+                    </div>
+                    <div class="carrusel-elementos">
+                        <a href="img/image 21.svg" data-lightbox="galería" title="Vuetify">
+                            <img src="img/image 21.svg" class="img-thumbnail">
+                        </a>
+                        
+                    </div>
+                    <div class="carrusel-elementos">
+                        <a href="img/image 22.svg" data-lightbox="galería" title="Flutter ">
+                            <img src="img/image 22.svg" class="img-thumbnail">
+                        </a>
+                        
+                    </div>
+                    <div class="carrusel-elementos">
+                        <a href="img/image 23.svg" data-lightbox="galería" title="React Native">
+                            <img src="img/image 23.svg" class="img-thumbnail">
+                        </a>
+                        
+                    </div>
+                    <div class="carrusel-elementos">
+                        <a href="img/image 24.svg" data-lightbox="galería" title="Ionic">
+                            <img src="img/image 24.svg" class="img-thumbnail">
+                        </a>
+                        
+                    </div>
+                    <div class="carrusel-elementos">
+                        <a href="img/image 25.svg" data-lightbox="galería" title="Xamarin">
+                            <img src="img/image 25.svg" class="img-thumbnail">
+                        </a>
+                        
+                    </div>
+                </div>
+                <button
+                    aria-label="siguiente"
+                    class="carrusel-siguiente btn-carrusel-sig-1 "
+                >
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        <div role="tablist" class="carrusel-indicadores indicadores-1"></div>
+    </div>
+    
 
     <!-- Sección de contenido educativo -->
     <section class="educativo">
-      <h2>Recursos Educativos para Aprender sobre UI Frameworks</h2>
+      <h2>Recursos Educativos para Aprender sobre Frameworks y Componentes UI</h2>
 
       <article>
-        <h3>¿Por Qué Aprender UI Frameworks?</h3>
+        <h3>¿Por Qué Aprender Frameworks y Componentes UI ?</h3>
         <p>
           Explora la importancia de los frameworks de UI en el desarrollo
           moderno de aplicaciones y cómo pueden acelerar el proceso de diseño y
@@ -139,5 +240,11 @@
         <li><a href="#">Términos de uso</a></li>
       </ul>
     </footer>
+
+    <script src="carrucel.js"></script>
+    <script src="https://kit.fontawesome.com/e204c7cc2e.js" crossorigin="anonymous"></script>
+   
+  
+
   </body>
 </html>

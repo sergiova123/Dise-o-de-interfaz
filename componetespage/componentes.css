@@ -1,0 +1,71 @@
+:root {
+--color-primario: #5C6AC4; /* Azul para elementos primarios */
+    --color-secundario: #69BE28; /* Verde actualizado como color secundario */
+    --color-fondo: #FFFFFF; /* Color de fondo para el contenido principal */
+    --color-texto-primario: #212121; /* Color principal del texto */
+    --color-texto-secundario: #757575; /* Color secundario del texto */
+    --color-borde: #333333; /* Color para bordes y divisiones */
+    --color-menu-fondo: #333333; /* Fondo oscuro para el menú */
+    --color-menu-hover: #5C6AC4; /* Color de fondo para hover en el menú */
+    --color-texto-menu: #FFFFFF; 
+    --gradiente-hero: linear-gradient(to right, #5C6AC4, #69BE28);
+}
+body {
+    font-family: Arial, sans-serif;
+    background: var(--gradiente-hero); /* Usando gradiente */
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Estilos generales del menú */
+.menu {
+    display: flex;
+    justify-content: center; /* Centra los elementos de la lista horizontalmente */
+    background-color: var(--color-menu-fondo);
+    font-family: Arial, sans-serif;
+    padding: 10px 20px; /* Mantiene la ampliación de la barra de fondo */
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-texto-menu);
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: var(--color-menu-hover);
+}
+
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+main {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

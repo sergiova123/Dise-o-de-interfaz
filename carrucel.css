@@ -1,0 +1,162 @@
+/* Variables para el carrusel */
+:root {
+    --color-btn-carrusel: #a89cc8; /* Usando color primario para los botones */
+    --color-btn-hover: #69BE28; /* Color secundario para hover */
+    --sombra-carrusel: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera para los elementos */
+  }
+.row {
+    border-top: 2px solid var(--color-borde);
+}  
+
+  .carrusel-lista {
+    display: flex;
+    overflow-x: auto; /* Permite el desplazamiento solo horizontal */
+    overflow-y: hidden; /* Oculta el desplazamiento vertical */
+    -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+    scrollbar-width: none; /* Para Firefox */
+    white-space: nowrap; /* Evita el salto de línea de los elementos */
+}
+
+/* Para navegadores basados en Webkit como Safari y Chrome */
+.carrusel-lista::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en Chrome y Safari */
+}
+
+  
+  .carrusel-contenedor {
+      position: relative; /* Ajustado para posicionamiento de botones absolutos */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 40px 0; /* Más espacio alrededor del carrusel */
+  }
+  
+  .carrusel-elementos {
+    flex: 0 0 auto;
+    margin: 0 30px; /* Ajusta el margen entre los elementos del carrusel */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza las transiciones */
+}
+
+.carrusel-elementos img {
+    width: 100%; /* Ajusta la imagen al contenedor del carrusel */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Elimina el recuadro de fondo alrededor del ícono */
+.carrusel-elementos a {
+    background: none;
+    padding: 0;
+}
+
+/* Añade una sombra sutil y una transformación cuando se pasa el mouse sobre los íconos */
+.carrusel-elementos:hover {
+    transform: scale(1.05); /* Escala ligeramente el ícono para indicar interactividad */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra para resaltar */
+}
+
+/* Añade un título emergente nativo del navegador en los enlaces para los nombres de los íconos */
+.carrusel-elementos a {
+    position: relative;
+}
+
+.carrusel-elementos a::after {
+    content: attr(title);
+    visibility: hidden;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 100%; /* Coloca el tooltip completamente sobre el elemento */
+    transform: translateX(-50%) translateY(-10px); /* Ajusta la posición */
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    z-index: 100; /* Asegúrate de que el z-index sea suficientemente alto */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.carrusel-elementos a:hover::after {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-15px);
+}
+
+
+.tooltip {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* Centra el tooltip bajo la imagen */
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    z-index: 2;
+}
+
+.carrusel-elementos:hover .tooltip {
+    visibility: visible; /* Muestra el tooltip cuando se pasa el cursor */
+}
+
+  
+  .carrusel-anterior, .carrusel-siguiente {
+      position: absolute; /* Posicionamiento absoluto para sobreponerse al carrusel */
+      top: 50%; /* Centrado vertical */
+      transform: translateY(-50%); /* Alineación precisa */
+      z-index: 10; /* Asegura que esté sobre otros elementos */
+      width: 40px;
+      height: 40px;
+      border: none; /* Sin borde */
+      border-radius: 50%;
+      background-color: var(--color-btn-carrusel);
+      color: white;
+      font-size: 18px;
+      cursor: pointer; /* Cursor tipo puntero para indicar clickeabilidad */
+      transition: all 0.3s ease; /* Suaviza todas las transiciones */
+  }
+
+  .carrusel-anterior i, .carrusel-siguiente i {
+    font-size: 2rem; /* O el tamaño que prefieras */
+    line-height: 1; /* Esto puede ayudar a eliminar discrepancias en el tamaño */
+}
+
+  
+  .carrusel-anterior {
+      left: 10px; /* Ajuste desde el lado izquierdo */
+  }
+  
+  .carrusel-siguiente {
+      right: 10px; /* Ajuste desde el lado derecho */
+  }
+  
+  .carrusel-anterior:hover, .carrusel-siguiente:hover {
+    background-color: var(--color-menu-hover); /* Cambio de color para mayor visibilidad al interactuar */
+}
+
+  
+  .glider-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 3px;
+      background-color: #ccc;
+      transition: background-color 0.3s;
+  }
+  
+  .glider-dot.active {
+      background-color: var(--color-btn-carrusel); /* Color activo del botón */
+  }
+  
+  .glider-dot:focus, .glider-dot:hover {
+      background: var(--color-btn-hover);
+      opacity: 80%;
+  }
+  
